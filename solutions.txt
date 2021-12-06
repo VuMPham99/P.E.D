@@ -1,0 +1,30 @@
+# Part A:
+
+## Recovered password
+- user: srstephenso2, psw: 00316759
+- user: ceccio, psw: 41467847
+## Pseudocode for attack
+1. Function takes in 3 (type) string parameters: user, salt, and hash value.
+2. Initializes variables.
+3. While loop checking both sha256 values from 0 to 99999999 or 00000000 to 99999999.
+4. within variables, flag control if psw is type 0000xxxx or just xxxx.
+5. return psw (string) based on flag.
+## Worst case running time
+- O(n)
+## Discussion of current proposal and suggestions for improvement
+- If not given pepper, brute force will most likely crack the password in appropriate time
+- Add pepper for more "flavour", thus making psw encryption more "exquisite". 
+
+# Part B:
+
+## Discussion of the current scheme
+- plain text and iv could be retrieved, thus making ciphertext vulnerable. Altering iv based on plain text could change ciphertext. All of this were done without the knowledge of the key  
+## Suggestions for improving the scheme
+- could change the system to assymetric using public and private key instead of send the iv. Or sending an encrypted iv.
+
+# Part C:
+
+## Secret code
+- B47C1E79-342ab3cf
+## Explanation
+- I reversed the process that were done to when the sever's part when they received gx and send out gy. Theses processes are essentially the same as the process of exchanging public and private key does not change.   
